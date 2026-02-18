@@ -1,0 +1,33 @@
+theme = "catppuccin_macchiato"
+editor.auto-format = true
+editor.color-modes = true
+editor.scrolloff = 50
+editor.mouse = false
+editor.indent-guides.render = true
+editor.indent-guides.character = "▏"
+editor.soft-wrap.enable = true
+editor.cursorcolumn = true
+editor.rulers = [80, 120]
+editor.jump-label-alphabet = "jfkdls;aurieowpqnvmcxz"
+
+[keys.normal]
+H = ":buffer-previous"
+L = ":buffer-next"
+"tab"   = "expand_selection"
+"S-tab" = "shrink_selection"
+C-j     = "page_down"
+C-k     = ["page_up", "goto_window_top"]
+
+# [keys.normal.b]
+# p = ":buffer-previous"
+# n = ":buffer-next"
+# q = ":buffer-close"
+# w = ":write-buffer-close"
+
+
+# [keys.normal]
+# "ret" = "goto_word"
+
+# [keys.normal.space]
+# f = "file_picker_in_current_directory"
+# F = "file_picker"
