@@ -2,3 +2,7 @@
 name = "c"
 auto-format = true
 formatter = { command = "clang-format", args = ["-"] }
+language-servers = [ "clangd" ]
+
+[language-server.clangd]
+command = "clangd"
