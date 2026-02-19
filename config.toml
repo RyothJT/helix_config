@@ -10,7 +10,7 @@ editor.indent-guides.character = "▏"
 editor.soft-wrap.enable = true
 editor.cursorcolumn = true
 editor.rulers = [80, 120]
-editor.jump-label-alphabet = "jfkdls;aurieowpqnvmcxz"
+editor.jump-label-alphabet = "jfkdlsaurieowpqnvmcxz"
 
 [keys.normal]
 H = ":buffer-previous"
