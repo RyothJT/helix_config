@@ -12,6 +12,8 @@ soft-wrap.enable        = true
 cursorcolumn            = true
 rulers                  = [80, 120]
 jump-label-alphabet     = "jfkdlsaurieowpqnvmcxz"
+undercurl               = true
+lsp.display-messages    = true
 
 [keys.normal]
 H                       = ":buffer-previous"
@@ -22,7 +24,6 @@ C-j                     = "page_down"
 C-k                     = "page_up"
 x                       = "extend_line_below"
 X                       = "extend_line_above"
-
 
 # [keys.normal]
 # "ret"                 = "goto_word"

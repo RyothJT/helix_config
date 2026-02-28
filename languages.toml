@@ -1,8 +1,31 @@
+# 2. Define Tinymist (Merged Block)
+[language-server.tinymist]
+command = "tinymist"
+
+[language-server.tinymist.config]
+exportPdf = "onSave"
+preview.background.enabled = true
+# Ensure these args are passed correctly to the binary
+preview.background.args = ["--data-plane-host=127.0.0.1:6973", "--invert-colors=never"]
+
+# 3. Define Clangd
+[language-server.clangd]
+command = "clangd"
+
+# --- Language Configurations ---
+
 [[language]]
 name = "c"
 auto-format = true
 formatter = { command = "clang-format", args = ["-"] }
 language-servers = [ "clangd" ]
 
-[language-server.clangd]
-command = "clangd"
+[[language]]
+name = "typst"
+scope = "source.typst"
+injection-regex = "typst"
+file-types = ["typ"]
+roots = ["typst.toml", ".git"]
+auto-format = true
+language-servers = [ "tinymist"]
+auto-pairs = { '(' = ')', '{' = '}', '[' = ']', '"' = '"', '$' = '$' }
