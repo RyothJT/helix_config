@@ -15,6 +15,18 @@ command = "clangd"
 # --- Language Configurations ---
 
 [[language]]
+name = "verilog"
+indent = { tab-width = 2, unit = "  " }
+scope = "source.verilog"
+file-types = ["v", "vh", "vg", "sv", "svh"]
+language-servers = ["verible"]
+formatter = { command = "verible-verilog-format", args = ["--indentation_spaces=2", "-"] }
+auto-format = true
+
+[language-server.verible]
+command = "verible-verilog-ls"
+
+[[language]]
 name = "c"
 auto-format = true
 formatter = { command = "clang-format", args = ["-"] }
@@ -29,3 +41,8 @@ roots = ["typst.toml", ".git"]
 auto-format = true
 language-servers = [ "tinymist"]
 auto-pairs = { '(' = ')', '{' = '}', '[' = ']', '"' = '"', '$' = '$' }
+
+[[language]]
+name = "python"
+auto-format = true
+formatter = { command = "ruff", args = ["format", "-"] }

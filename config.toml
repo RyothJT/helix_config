@@ -14,6 +14,7 @@ rulers                  = [80, 120]
 jump-label-alphabet     = "jfkdlsaurieowpqnvmcxz"
 undercurl               = true
 lsp.display-messages    = true
+continue-comments       = false
 
 [keys.normal]
 H                       = ":buffer-previous"
@@ -24,6 +25,16 @@ C-j                     = "page_down"
 C-k                     = "page_up"
 x                       = "extend_line_below"
 X                       = "extend_line_above"
+C-y                     = ["save_selection", "select_all", "yank_main_selection_to_clipboard", "jump_backward", "collapse_selection"] # Copy entier buffer to system keyboard
+
+[keys.normal.space.l]
+c = ":open ~/.config/helix/config.toml"
+l = ":open ~/.config/helix/languages.toml"
+r = ":config-reload"
+
+[keys.insert]
+"C-v" = "paste_clipboard_after" # Maps Ctrl+v in Insert mode
+"C-p" = "paste_after" # Maps Ctrl+p in Insert mode
 
 # [keys.normal]
 # "ret"                 = "goto_word"
